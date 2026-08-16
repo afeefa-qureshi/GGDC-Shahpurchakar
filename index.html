@@ -1,0 +1,2484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahpur Chakar Government Girls Degree College | Official Website</title>
+    <!-- Tailwind CSS CDN (Approved Whitelist) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for professional typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                    colors: {
+                        college: {
+                            navy: '	#005582',
+                            blue: '#daf8e3',
+                            gold: '#00c2c7',
+                            light: '#EEF4F8',
+                            dark: '#081728'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .page-section {
+            display: none;
+        }
+        .page-section.active {
+            display: block;
+        }
+        .nav-link.active {
+            border-bottom: 2px solid #abeff8;
+            color: #abeff8;
+        }
+        .faculty-card.hidden {
+            display: none;
+        }
+
+        .page-banner {
+            min-height: 300px;
+        }
+
+        .page-banner img {
+            object-position: center 55%;
+        }
+
+        @media (max-width: 640px) {
+            .page-banner {
+                min-height: 260px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+
+    
+    <!-- Header & Navigation -->
+    <header class="bg-college-navy text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- College Logo -->
+                <div class="flex items-center cursor-pointer" onclick="navigateTo('home')" aria-label="Shahpur Chakar Government Girls Degree College Home">
+                    <img
+                        src="images/logo.png"
+                        alt="Shahpur Chakar Government Girls Degree College Logo"
+                        class="h-14 w-14 object-contain rounded-full bg-sm"
+                    >
+                </div>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden md:flex space-x-5 lg:space-x-7 text-sm font-medium tracking-wide">
+                    <button onclick="navigateTo('home')" class="nav-link py-2 text-white hover:text-college-gold transition-colors active" id="nav-home">Home</button>
+                    <button onclick="navigateTo('about')" class="nav-link py-2 text-white hover:text-college-gold transition-colors" id="nav-about">About</button>
+                    <button onclick="navigateTo('programs')" class="nav-link py-2 text-white hover:text-college-gold transition-colors" id="nav-programs">Programs</button>
+                    <button onclick="navigateTo('faculty')" class="nav-link py-2 text-white hover:text-college-gold transition-colors" id="nav-faculty">Faculty</button>
+                    <button onclick="navigateTo('events')" class="nav-link py-2 text-white hover:text-college-gold transition-colors" id="nav-events">Events</button>
+                    <button onclick="navigateTo('admissions')" class="nav-link py-2 text-white hover:text-college-gold transition-colors" id="nav-admissions">Admissions</button>
+                    <button onclick="navigateTo('contact')" class="nav-link py-2 text-white hover:text-college-gold transition-colors" id="nav-contact">Contact</button>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden md:block">
+                    <button onclick="navigateTo('admissions')" class="bg-college-gold text-college-navy font-bold px-5 py-2.5 rounded text-sm hover:bg-white hover:text-college-navy transition-all duration-200 shadow shadow-college-gold/20">
+                        Apply Now
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white p-2 focus:outline-none" aria-label="Toggle Navigation Menu">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+     <!-- Mobile Drawer Navigation -->
+<div id="mobile-menu"
+     class="hidden md:hidden bg-college-navy border-t border-college-navy px-4 pt-2 pb-4 space-y-2">
+
+    <button onclick="navigateTo('home')"
+            class="block w-full text-left px-3 py-2.5 rounded text-white hover:bg-college-blue font-medium">
+        Home
+    </button>
+
+    <button onclick="navigateTo('about')"
+            class="block w-full text-left px-3 py-2.5 rounded text-white hover:bg-college-blue font-medium">
+        About
+    </button>
+
+    <button onclick="navigateTo('programs')"
+            class="block w-full text-left px-3 py-2.5 rounded text-white hover:bg-college-blue font-medium">
+        Programs
+    </button>
+
+    <button onclick="navigateTo('faculty')"
+            class="block w-full text-left px-3 py-2.5 rounded text-white hover:bg-college-blue font-medium">
+        Faculty
+    </button>
+
+    <!-- EVENTS -->
+    <button onclick="navigateTo('events')"
+            class="block w-full text-left px-3 py-2.5 rounded text-white hover:bg-college-blue font-medium">
+        Events
+    </button>
+
+    <button onclick="navigateTo('admissions')"
+            class="block w-full text-left px-3 py-2.5 rounded text-white hover:bg-college-blue font-medium">
+        Admissions
+    </button>
+
+    <button onclick="navigateTo('contact')"
+            class="block w-full text-left px-3 py-2.5 rounded text-white hover:bg-college-blue font-medium">
+        Contact
+    </button>
+
+    <!-- APPLY BUTTON -->
+    <button onclick="navigateTo('admissions')"
+            class="block w-full text-center bg-college-gold text-college-navy
+                   font-bold px-4 py-3 rounded mt-4 hover:opacity-90 transition">
+        Apply Process
+    </button>
+
+</div>
+    </header>
+
+    <!-- MAIN BODY CONTENT -->
+    <main class="flex-grow">
+
+        <!-- ================= 1. HOME PAGE SECTION ================= -->
+        <section id="page-home" class="page-section active">
+            <!-- Premium Hero Section -->
+            <div class="relative bg-college-navy text-white overflow-hidden py-28 sm:py-36">
+                <div class="absolute inset-0 opacity-90">
+                    <div class="absolute inset-0 bg-gradient-to-r from-college-dark via-college-navy/10 to-transparent z-10"></div>
+                    <img src="images/campus.jpeg" alt="GGDC Shahpur Chakar" class="w-full h-full object-cover">
+                </div>
+                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-20">
+                    <div class="max-w-3xl">
+                        <span class="text-college-gold font-bold uppercase tracking-widest text-xs sm:text-sm bg-white/10 px-3 py-1 rounded-full inline-block mb-4">Empowering Leaders of Tomorrow</span>
+                        <h1 class="font-serif text-4xl sm:text4xl font-bold tracking-tight leading-tight mb-4">Step Into Your Bright Future at <br>GGDC Shahpur Chakar</h1>
+                        <p class="text-base sm:text-lg text-gray-300 mb-8 max-w-2xl"> Secure your academic goals with high-standard board preparation and supportive mentorship right here in Shahpur Chakar, Sindh.</p>
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="navigateTo('programs')" class="bg-college-gold text-college-navy font-bold px-7 py-3.5 rounded hover:bg-white transition-all shadow-lg shadow-college-gold/20">Explore programs</button>
+                           <!-- <button onclick="navigateTo('contact')" class="border border-white/30 hover:border-white text-white px-7 py-3.5 rounded transition bg-white/5 backdrop-blur-sm">Schedule Campus Visit</button>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- College Introduction -->
+            <div class="bg-white py-16 border-b border-gray-100">
+                <div class="max-w-5xl mx-auto px-4 text-center">
+                    <h2 class="font-serif text-3xl font-bold text-college-navy mb-4">Welcome to Shahpur Chakar Government Girls Degree College</h2>
+                    <div class="h-1 w-16 bg-college-gold mx-auto mb-6"></div>
+                    <p class="text-gray-600 leading-relaxed text-lg max-w-3xl mx-auto">
+                        We are dedicated to providing quality education to the young women of our community. Through great teaching and practical learning in our labs, we make sure our students are fully ready for university and future jobs. Our college provides a safe, supportive space where you can learn, build skills, and reach your goals
+                    </p>
+                </div>
+            </div>
+
+            <!-- Programs Overview -->
+            <div class="bg-gray-50 py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif text-3xl font-bold text-college-navy">Academic programs</h2>
+                        <p class="text-gray-500 mt-2 text-sm sm:text-base">Explore our five primary foundational streams built for career scalability</p>
+                    </div>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                        <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm text-center hover:border-college-gold transition cursor-pointer" onclick="navigateTo('programs')">
+                            <div class="w-10 h-10 bg-red-50 text-red-600 rounded-full flex items-center justify-center mx-auto mb-3">🔬</div>
+                            <h4 class="font-bold text-gray-900 text-sm">Pre-Medical</h4>
+                        </div>
+                        <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm text-center hover:border-college-gold transition cursor-pointer" onclick="navigateTo('programs')">
+                            <div class="w-10 h-10 bg-blue-50 text-college-blue rounded-full flex items-center justify-center mx-auto mb-3">⚙️</div>
+                            <h4 class="font-bold text-gray-900 text-sm">Pre-Engineering</h4>
+                        </div>
+                        <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm text-center hover:border-college-gold transition cursor-pointer" onclick="navigateTo('programs')">
+                            <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-3">💻</div>
+                            <h4 class="font-bold text-gray-900 text-sm">Computer Science</h4>
+                        </div>
+                        <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm text-center hover:border-college-gold transition cursor-pointer" onclick="navigateTo('programs')">
+                            <div class="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-3">🧪</div>
+                            <h4 class="font-bold text-gray-900 text-sm">AD S/BSC</h4>
+                        </div>
+                        <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm text-center hover:border-college-gold transition cursor-pointer" onclick="navigateTo('programs')">
+                            <div class="w-10 h-10 bg-amber-50 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-3">🎨</div>
+                            <h4 class="font-bold text-gray-900 text-sm">BA/ADA</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Choose Us -->
+            <div class="bg-white py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 class="font-serif text-3xl font-bold text-college-navy mb-4">Why Choose us As Your Destination?</h2>
+                            <div class="h-1 w-12 bg-college-gold mb-6"></div>
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-3">
+                                    <div class="bg-college-light p-2 rounded text-college-blue font-bold text-xs mt-1">✓</div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 text-base">Experienced Teachers</h4>
+                                        <p class="text-sm text-gray-600">Learn from qualified subject specialists who care about your success.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="bg-college-light p-2 rounded text-college-blue font-bold text-xs mt-1">✓</div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 text-base">Science & Computer Labs</h4>
+                                        <p class="text-sm text-gray-600">Practice what you learn in our fully equipped biology, chemistry, and computer rooms.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="bg-college-light p-2 rounded text-college-blue font-bold text-xs mt-1">✓</div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 text-base">Safe Environment</h4>
+                                        <p class="text-sm text-gray-600">A completely secure campus built specifically for female education.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 gap-4">
+                            <div class="p-6 ">
+                                                            <img src="images/1.jpeg" alt="Main Administration Building" class="w-full h-60 object-cover">
+                            </div>
+                        </div>         
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ================= KEY EDUCATION OFFICIALS ================= -->
+<section class="py-14 bg-white">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Heading -->
+        <div class="text-center mb-10">
+
+            <span class="text-college-gold text-xs font-bold uppercase tracking-widest">
+             Leadership
+            </span>
+
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-college-navy mt-2">
+            Education Officials
+            </h2>
+
+            <p class="text-gray-600 max-w-2xl mx-auto mt-3">
+                Education leadership and officials supporting the development
+                of colleges and higher education in Sindh.
+            </p>
+
+        </div>
+
+
+        <!-- Officials Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+
+            <!-- Syed Sardar Ali Shah -->
+            <div class="text-center group">
+
+                <div class="overflow-hidden bg-gray-100">
+                    <img src="images/minister.JPG"
+                         alt="Syed Sardar Ali Shah"
+                         class="w-full h-64 object-cover
+                                group-hover:scale-105
+                                transition duration-500">
+                </div>
+
+                <h3 class="font-serif text-lg font-bold
+                           text-green-700 mt-4">
+                    Syed Sardar Ali Shah
+                </h3>
+
+                <p class="text-sm text-gray-600 mt-2">
+                    Education Minister
+                </p>
+
+            </div>
+
+
+            <!-- Mr. Nadeem ur Rehman -->
+            <div class="text-center group">
+
+                <div class="overflow-hidden bg-gray-100">
+                    <img src="images/SecretaryCED.jpeg"
+                         alt="Mr. Nadeem ur Rehman"
+                         class="w-full h-64 object-cover
+                                group-hover:scale-105
+                                transition duration-500">
+                </div>
+
+                <h3 class="font-serif text-lg font-bold
+                           text-green-700 mt-4">
+                    Mr. Nadeem ur Rehman
+                </h3>
+
+                <p class="text-sm text-gray-600 mt-2">
+                    Secretary CED
+                </p>
+
+            </div>
+
+
+            <!-- Mr. Zahid Rajper -->
+            <div class="text-center group">
+
+                <div class="overflow-hidden bg-gray-100">
+                    <img src="images/directorCED.JPG"
+                         alt="Mr. Zahid Rajper"
+                         class="w-full h-64 object-cover
+                                group-hover:scale-105
+                                transition duration-500">
+                </div>
+
+                <h3 class="font-serif text-lg font-bold
+                           text-green-700 mt-4">
+                    Mr. Zahid Rajper
+                </h3>
+
+                <p class="text-sm text-gray-600 mt-2">
+                    Director General CED
+                </p>
+
+            </div>
+
+
+            <!-- Mrs. Lala Rukh Baloch -->
+            <div class="text-center group">
+
+                <div class="overflow-hidden bg-gray-100">
+                    <img src="images/RD.jpg"
+                         alt="Mrs. Lala Rukh Baloch"
+                         class="w-full h-64 object-cover
+                                group-hover:scale-105
+                                transition duration-500">
+                </div>
+
+                <h3 class="font-serif text-lg font-bold
+                           text-green-700 mt-4">
+                    Mrs. Lala Rukh Baloch
+                </h3>
+
+                <p class="text-sm text-gray-600 mt-2">
+                    Regional Director Colleges, SBA
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+            <!-- Campus/Facilities Preview -->
+            <div class="bg-gray-100 py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-10">
+                        <h2 class="font-serif text-3xl font-bold text-college-navy">Our Campus</h2>
+                        <p class="text-gray-500 mt-2 text-sm">Experience the architectural beauty and structural assets configured for development</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                            <img src="images/4.jpeg" alt="Main Administration Building" class="w-full h-48 object-cover">
+                            <div class="p-4"><h4 class="font-bold text-gray-900">Campus</h4></div>
+                        </div>
+                        <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                            <img src="images/sports.jpeg" alt="University Library Hall" class="w-full h-48 object-cover">
+                            <div class="p-4"><h4 class="font-bold text-gray-900">Sports</h4></div>
+                        </div>
+                        <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                            <img src="images/labs.jpeg" alt="Modern Lecture Room" class="w-full h-48 object-cover">
+                            <div class="p-4"><h4 class="font-bold text-gray-900">Labs</h4></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials Section
+            <div class="bg-white py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif text-3xl font-bold text-college-navy">Voices of Our Community</h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-college-light p-6 rounded-lg border border-gray-100">
+                            <p class="italic text-gray-700 text-sm">"The computer science department at Apex is phenomenal. The rigorous coursework combined with the hands-on lab infrastructure helped me land a summer coding internship at a leading technology firm smoothly."</p>
+                            <span class="block text-xs font-bold text-college-navy mt-4 uppercase tracking-wider">— Aaron Malik, Class of 2027</span>
+                        </div>
+                        <div class="bg-college-light p-6 rounded-lg border border-gray-100">
+                            <p class="italic text-gray-700 text-sm">"Transitioning into the Pre-Medical stream at Apex provided me with robust analytical foundations. The professors push you to explore beyond standard books, emphasizing experimental research strategies."</p>
+                            <span class="block text-xs font-bold text-college-navy mt-4 uppercase tracking-wider">— Dr. Zainab Tariq, Alumna & Residency Fellow</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        -->
+            <!-- Contact CTA -->
+            <div class="bg-college-gold text-white py-12 text-center">
+                <div class="max-w-4xl mx-auto px-4">
+                    <h3 class="font-serif text-2xl sm:text-3xl font-bold mb-3">Begin Your Academic Journey With Us</h3>
+                    <p class="text-black-300 text-sm max-w-xl mx-auto mb-6">Our dedicated student advisory framework stands prepared to walk you through enrolment guidelines, or program details.</p>
+                    <button onclick="navigateTo('contact')" class="bg-college-blue text-college-navy font-bold px-6 py-3 rounded text-sm hover:bg-white hover:text-college-navy transition shadow">Get In Touch Today</button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= 2. ABOUT PAGE SECTION ================= -->
+        <section id="page-about" class="page-section">
+            <!-- Page Banner -->
+            <div class="page-banner relative overflow-hidden text-white">
+                <img
+                    src="images/2.jpeg"
+                    alt="About Our Institution banner - Shahpur Chakar Government Girls Degree College"
+                    class="absolute inset-0 w-full h-full object-cover"
+                >
+                <div class="absolute inset-0 bg-college-dark/75"></div>
+                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+                    <span class="inline-block text-college-gold text-xs font-bold uppercase tracking-[0.2em] mb-3">Government Girls Degree College Shahpur Chakar </span>
+                    <h1 class="font-serif text-3xl sm:text-5xl font-bold">About Our campus</h1>
+                    <p class="text-gray-200 mt-3 text-sm sm:text-base max-w-2xl">Learn about our institution, mission, academic environment, and campus.</p>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+                <!-- College Overview -->
+                <div class="bg-white p-6 sm:p-8 rounded-lg border border-gray-200 shadow-sm">
+                    <h3 class="font-serif text-2xl font-bold text-college-navy mb-4">College Overview</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                        Government Girls Degree College, Shahpur Chakar is a college built 
+                        for young women. We provide good education to help our students succeed 
+                        in their studies. Our classes focus on clear teaching so that every student can understand 
+                        her subjects deeply. Our campus has comfortable classrooms, science labs, and a quiet
+                         library space. We provide a peaceful and secure environment where students can study 
+                         comfortably, build skills, and prepare for university.
+                        
+                    </p>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                         We believe in keeping our students healthy and active. Our college has open grounds where
+                          students can play sports like badminton, volleyball, and other games. 
+                          We also arrange annual sports days and fun competitions to help students build teamwork, confidence, and friendly relationships.
+                    </p>
+                </div>
+
+                <!-- Vision & Mission -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm border-t-4 border-college-blue">
+                        <h4 class="font-bold text-lg text-college-navy uppercase tracking-wider mb-2">Our Core Mission</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">Our goal is to give every girl a strong start 
+                            in her education. We teach our students to understand their subjects well and face
+                             future challenges with confidence. To provide good education to
+                              young women in our area. We want to help our students think clearly, build
+                               useful skills, and become responsible people who help their families and community</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm border-t-4 border-college-gold">
+                        <h4 class="font-bold text-lg text-college-navy uppercase tracking-wider mb-2">Our Strategic Vision</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">We want to build a collegewhere parents feel proud to send their daughters. We aim to keep improving
+                             our classrooms and labs to give our community the best possible learning experience.
+                            We want to be known for great teaching, safe learning spaces, and helping every student build a successful future</p>
+                    </div>
+                </div>
+
+                <!-- Principal's / Dean Message -->
+                <div class="bg-college-light p-6 sm:p-8 rounded-lg border border-college-blue/10 flex flex-col md:flex-row gap-6 items-center">
+                    <img src="images/principal.jpeg" alt="Principal Profile Portrait" class="w-56 h-56  object-cover">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-college-navy">Message from the Principal</h3>
+                        <span class="text-xs font-semibold text-gray-500 uppercase tracking-widest block mb-3">Professor Jamila Gul Wassan.</span>
+                        <p class="text-sm text-gray-700 italic leading-relaxed mb-2">
+                            Education is not just about copying down notes or memorizing books.
+                             It is about learning how to think, grow, and solve real-world problems. 
+                             Here at our college, we encourage students to ask questions, learn through
+                              practical work in our labs, and discover their true talents. 
+                              Our main goal is to help every student understand her subjects deeply and 
+                              build real confidence. We do not want you to just pass exams; we want you 
+                              to learn useful skills for life. Our teachers are always here to guide you and help you learn
+                              
+                              
+                        </p>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            We welcome you to a  community that values hard work, supports your goals, and is 
+                              fully dedicated to helping you build a successful future career."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Why Choose the College Redux 
+                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                    <h3 class="font-serif text-xl font-bold text-college-navy mb-4">Core Structural Advantages</h3>
+                    <div class="grid sm:grid-cols-3 gap-6 text-sm">
+                        <div class="p-4 bg-gray-50 rounded border border-gray-100">
+                            <h5 class="font-bold text-gray-900 mb-1">Modern Pedagogies</h5>
+                            <p class="text-xs text-gray-500">Case-based workflows, integrated coding bootcamps, and real-time medical simulation metrics.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded border border-gray-100">
+                            <h5 class="font-bold text-gray-900 mb-1">Global Validation</h5>
+                            <p class="text-xs text-gray-500">Our degrees match transfer parameters across all premier international higher learning commissions.</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded border border-gray-100">
+                            <h5 class="font-bold text-gray-900 mb-1">Financial Backing</h5>
+                            <p class="text-xs text-gray-500">Comprehensive bursary models, merit funding grants, and emergency academic stipends available.</p>
+                        </div>
+                    </div>
+                </div>
+            -->
+               
+    <!-- Campus Facilities -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-8">
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-college-navy">
+                Campus Facilities
+            </h2>
+            <p class="mt-2 text-sm text-gray-600">
+                A supportive and comfortable learning environment for our students.
+            </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Laboratories -->
+            <div class="bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition">
+                <img
+                    src="images/lab.jpeg"
+                    alt="Science and Computer Laboratories"
+                    class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="font-semibold text-college-navy text-base mb-2">
+                        Science  Labs
+                    </h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        Well-equipped laboratories that support practical learning,
+                        scientific activities, and computer-based education.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Library -->
+            <div class="bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition">
+                <img
+                    src="images/library.jpg"
+                    alt="College Library"
+                    class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="font-semibold text-college-navy text-base mb-2">
+                        College Library
+                    </h3>
+
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        A learning space with academic books and study resources
+                        to support students in their coursework and examinations.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Classrooms -->
+            <div class="bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition">
+
+                <img
+                    src="images/class.jpeg"
+                    alt="College Classrooms"
+                    class="w-full h-48 object-cover"
+                >
+
+                <div class="p-5">
+                    <h3 class="font-semibold text-college-navy text-base mb-2">
+                        Classrooms
+                    </h3>
+
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        Comfortable classrooms designed to provide students with
+                        a focused and supportive academic environment.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Sports -->
+            <div class="bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition">
+
+                <img
+                    src="images/sports.jpeg"
+                    alt="Sports and Physical Activities"
+                    class="w-full h-48 object-cover"
+                >
+
+                <div class="p-5">
+                    <h3 class="font-semibold text-college-navy text-base mb-2">
+                        Sports & Physical Activities
+                    </h3>
+
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        Opportunities for students to participate in sports,
+                        physical activities, and recreational activities.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Computer Lab -->
+            <div class="bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition">
+
+                <img
+                    src="images/labb.jpg"
+                    alt="Computer Laboratory"
+                    class="w-full h-48 object-cover"
+                >
+
+                <div class="p-5">
+                    <h3 class="font-semibold text-college-navy text-base mb-2">
+                        Computer Facilities
+                    </h3>
+
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        Computer facilities supporting digital learning, academic
+                        work, and technology-based education.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Green Campus -->
+            <div class="bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition">
+
+                <img
+                    src="images/3.jpeg"
+                    alt="College Green Campus"
+                    class="w-full h-48 object-cover"
+                >
+
+                <div class="p-5">
+                    <h3 class="font-semibold text-college-navy text-base mb-2">
+                        Green Campus
+                    </h3>
+
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        A green and welcoming campus environment providing
+                        comfortable spaces for learning and relaxation.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+</section>
+
+        <!-- ================= 3. PROGRAMS PAGE SECTION ================= -->
+<!-- Programs Page -->
+<section id="page-programs" class="page-section">
+
+    <!-- Banner -->
+    <div class="page-banner relative overflow-hidden text-white">
+        <img src="images/1.jpeg"
+             alt="Government Girls Degree College Shahpur Chakar"
+             class="absolute inset-0 w-full h-full object-cover">
+
+        <div class="absolute inset-0 bg-college-dark/70"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <span class="text-college-gold text-xs font-bold uppercase tracking-widest">
+                Academic Programs
+            </span>
+
+            <h1 class="font-serif text-4xl sm:text-5xl font-bold mt-3">
+                Programs We Offer
+            </h1>
+
+            <p class="text-gray-200 mt-3 max-w-2xl">
+                Explore our academic programs designed to provide students
+                with a strong foundation for higher education and future careers.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Programs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+            <!-- Pre-Medical -->
+            <div class="bg-white border border-gray-200 rounded-xl overflow-hidden
+                        hover:shadow-lg transition">
+
+                <img src="images/medical.jpg"
+                     alt="Pre Medical Program"
+                     class="w-full h-44 object-cover">
+
+                <div class="p-6">
+
+                    <span class="text-xs font-bold uppercase tracking-widest
+                                 text-college-gold">
+                        Intermediate
+                    </span>
+
+                    <h2 class="font-serif text-xl font-bold text-college-navy mt-2">
+                        Pre-Medical
+                    </h2>
+
+                    <p class="text-sm text-gray-600 leading-relaxed mt-3">
+                        A science-based program preparing students for further
+                        studies in medicine, health sciences, and related fields.
+                    </p>
+
+                    <div class="mt-5 pt-4 border-t border-gray-100">
+                        <span class="text-xs text-gray-500">
+                            Biology • Chemistry • Physics
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Pre-Engineering -->
+            <div class="bg-white border border-gray-200 rounded-xl overflow-hidden
+                        hover:shadow-lg transition">
+
+                <img src="images/eng.jpg"
+                     alt="Pre Engineering Program"
+                     class="w-full h-44 object-cover">
+
+                <div class="p-6">
+
+                    <span class="text-xs font-bold uppercase tracking-widest
+                                 text-college-gold">
+                        Intermediate
+                    </span>
+
+                    <h2 class="font-serif text-xl font-bold text-college-navy mt-2">
+                        Pre-Engineering
+                    </h2>
+
+                    <p class="text-sm text-gray-600 leading-relaxed mt-3">
+                        A strong foundation in mathematics, physics, and chemistry
+                        for students planning higher studies in engineering and
+                        related disciplines.
+                    </p>
+
+                    <div class="mt-5 pt-4 border-t border-gray-100">
+                        <span class="text-xs text-gray-500">
+                            Mathematics • Physics • Chemistry
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Computer Science -->
+            <div class="bg-white border border-gray-200 rounded-xl overflow-hidden
+                        hover:shadow-lg transition">
+
+                <img src="images/cs.JPG"
+                     alt="Computer Science Program"
+                     class="w-full h-44 object-cover">
+
+                <div class="p-6">
+
+                    <span class="text-xs font-bold uppercase tracking-widest
+                                 text-college-gold">
+                        Intermediate
+                    </span>
+
+                    <h2 class="font-serif text-xl font-bold text-college-navy mt-2">
+                        Computer Science
+                    </h2>
+
+                    <p class="text-sm text-gray-600 leading-relaxed mt-3">
+                        An academic program introducing students to computing,
+                        programming, information technology, and digital concepts.
+                    </p>
+
+                    <div class="mt-5 pt-4 border-t border-gray-100">
+                        <span class="text-xs text-gray-500">
+                            Computer Science • Mathematics • Physics
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <!-- AD Science -->
+            <div class="bg-white border border-gray-200 rounded-xl overflow-hidden
+                        hover:shadow-lg transition">
+
+                <img src="images/ads.jpg"
+                     alt="Associate Degree in Science"
+                     class="w-full h-44 object-cover">
+
+                <div class="p-6">
+
+                    <span class="text-xs font-bold uppercase tracking-widest
+                                 text-college-gold">
+                        Associate Degree
+                    </span>
+
+                    <h2 class="font-serif text-xl font-bold text-college-navy mt-2">
+                      ADS/BSC
+                    </h2>
+
+                    <p class="text-sm text-gray-600 leading-relaxed mt-3">
+                        An undergraduate-level program providing students with
+                        foundational knowledge in selected science disciplines.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- AD Arts -->
+            <div class="bg-white border border-gray-200 rounded-xl overflow-hidden
+                        hover:shadow-lg transition">
+
+                <img src="images/ada.avif"
+                     alt="Associate Degree in Arts"
+                     class="w-full h-44 object-cover">
+
+                <div class="p-6">
+
+                    <span class="text-xs font-bold uppercase tracking-widest
+                                 text-college-gold">
+                        Associate Degree
+                    </span>
+
+                    <h2 class="font-serif text-xl font-bold text-college-navy mt-2">
+                        ADA/BA
+                    </h2>
+
+                    <p class="text-sm text-gray-600 leading-relaxed mt-3">
+                        A flexible undergraduate program covering selected
+                        humanities, social science, and language subjects.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+        <!-- ================= 4. FACULTY PAGE SECTION ================= -->
+        <section id="page-faculty" class="page-section">
+            <!-- Page Banner -->
+            <div class="page-banner relative overflow-hidden text-white">
+                <img
+                    src="images/1.jpeg"
+                    alt="Our Faculty banner - Shahpur Chakar Government Girls Degree College"
+                    class="absolute inset-0 w-full h-full object-cover"
+                >
+                <div class="absolute inset-0 bg-college-dark/75"></div>
+                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+                    <span class="inline-block text-college-gold text-xs font-bold uppercase tracking-[0.2em] mb-3"> Government Girls Degree College, Shahpur Chakar</span>
+                    <h1 class="font-serif text-3xl sm:text-5xl font-bold">Our Faculty</h1>
+                    <p class="text-gray-200 mt-3 text-sm sm:text-base max-w-2xl">Meet the dedicated teaching faculty across our academic departments.</p>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <!-- Department Category Filters 
+                <div class="flex flex-wrap gap-2 justify-center mb-10" id="faculty-filters-container">
+                    <button onclick="filterFaculty('all')" class="bg-college-navy text-white text-xs font-bold px-4 py-2 rounded shadow transition hover:opacity-90" id="btn-filter-all">Show All Faculty</button>
+                    <button onclick="filterFaculty('medical')" class="bg-white border border-gray-200 text-gray-700 text-xs font-bold px-4 py-2 rounded shadow-sm transition hover:bg-gray-50" id="btn-filter-medical">Pre-Medical</button>
+                    <button onclick="filterFaculty('engineering')" class="bg-white border border-gray-200 text-gray-700 text-xs font-bold px-4 py-2 rounded shadow-sm transition hover:bg-gray-50" id="btn-filter-engineering">Pre-Engineering</button>
+                    <button onclick="filterFaculty('cs')" class="bg-white border border-gray-200 text-gray-700 text-xs font-bold px-4 py-2 rounded shadow-sm transition hover:bg-gray-50" id="btn-filter-cs">Computer Science</button>
+                    <button onclick="filterFaculty('arts')" class="bg-white border border-gray-200 text-gray-700 text-xs font-bold px-4 py-2 rounded shadow-sm transition hover:bg-gray-50" id="btn-filter-arts">Arts & Humanities</button>
+                </div>
+            -->
+                <!-- Faculty Profiles Grid Layout -->
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="faculty-grid">
+                    
+                    <!-- Profile Card 1 -->
+                    <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm faculty-card" data-dept="cs">
+                        <img src="images/principal.jpeg" alt="Faculty Member Portrait" class="w-full h-44 object-contain">
+                        <div class="p-4">
+                            <span class="text-[10px] uppercase font-extrabold tracking-widest text-indigo-600 block"></span>
+                            <h4 class="font-bold text-gray-900 text-base mt-1">Prof. Jamila Gul Wassan</h4>
+                            <p class="text-xs text-gray-500 font-medium">Principal</p>
+                            <div class="h-px bg-gray-100 my-2"></div>
+                            <p class="text-xs text-gray-600"><strong>Qualification:</strong> MA Political Science | B.ED | M.ED</p>
+                            <p class="text-xs text-gray-600 mt-1"><strong></strong> </p>
+                        </div>
+                    </div>
+
+                    <!-- Profile Card 2 -->
+                    <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm faculty-card" data-dept="medical">
+                        <img src="images/profilepic.jpg" alt="Faculty Member Portrait" class="w-full h-44 object-cover">
+                        <div class="p-4">
+                            <span class="text-[10px] uppercase font-extrabold tracking-widest text-red-600 block">Islamiat</span>
+                            <h4 class="font-bold text-gray-900 text-base mt-1">Abdul Fatah</h4>
+                            <p class="text-xs text-gray-500 font-medium">Assistant Professor</p>
+                            <div class="h-px bg-gray-100 my-2"></div>
+                            <p class="text-xs text-gray-600"><strong>Qualification:</strong> ------</p>
+                            <p class="text-xs text-gray-600 mt-1"><strong></strong> </p>
+                        </div>
+                    </div>
+
+                    <!-- Profile Card 3 -->
+                    <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm faculty-card" data-dept="engineering">
+                        <img src="images/sanam.jpeg" alt="Faculty Member Portrait" class="w-full h-44 object-contain">
+                        <div class="p-4">
+                            <span class="text-[10px] uppercase font-extrabold tracking-widest text-college-red block">Chemistry</span>
+                            <h4 class="font-bold text-gray-900 text-base mt-1">Sanam Naz</h4>
+                            <p class="text-xs text-gray-500 font-medium">Lecturer</p>
+                            <div class="h-px bg-gray-100 my-2"></div>
+                            <p class="text-xs text-gray-600"><strong>Qualification:</strong> BS in Chemistry</p>
+                            <p class="text-xs text-gray-600 mt-1"><strong></strong> </p>
+                        </div>
+                    </div>
+
+                    <!-- Profile Card 4 -->
+                    <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm faculty-card" data-dept="arts">
+                        <img src="images/profilepic.jpg" alt="Faculty Member Portrait" class="w-full h-44 object-cover">
+                        <div class="p-4">
+                            <span class="text-[10px] uppercase font-extrabold tracking-widest text-amber-600 block">Librarion</span>
+                            <h4 class="font-bold text-gray-900 text-base mt-1">Rajesh Kumar</h4>
+                            <p class="text-xs text-gray-500 font-medium">Librarian</p>
+                            <div class="h-px bg-gray-100 my-2"></div>
+                            <p class="text-xs text-gray-600"><strong>Qualification:</strong> -----</p>
+                            <p class="text-xs text-gray-600 mt-1"><strong></strong> </p>
+                        </div>
+                    </div>
+                      <!-- Profile Card5 -->
+                    <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm faculty-card" data-dept="arts">
+                        <img src="images/profilepic.jpg" alt="Faculty Member Portrait" class="w-full h-44 object-cover">
+                        <div class="p-4">
+                            <span class="text-[10px] uppercase font-extrabold tracking-widest text-amber-600 block">Sindhi</span>
+                            <h4 class="font-bold text-gray-900 text-base mt-1">Zakia Dahri</h4>
+                            <p class="text-xs text-gray-500 font-medium">Lecturer</p>
+                            <div class="h-px bg-gray-100 my-2"></div>
+                            <p class="text-xs text-gray-600"><strong>Qualification:</strong> PHD in Sindhi</p>
+                            <p class="text-xs text-gray-600 mt-1"><strong></strong> </p>
+                        </div>
+                    </div>
+     <!-- Profile Card6-->
+                    <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm faculty-card" data-dept="arts">
+                        <img src="images/profilepic.jpg" alt="Faculty Member Portrait" class="w-full h-44 object-cover">
+                        <div class="p-4">
+                            <span class="text-[10px] uppercase font-extrabold tracking-widest text-amber-600 block">Pakistan Studies</span>
+                            <h4 class="font-bold text-gray-900 text-base mt-1">Rehana Zardari</h4>
+                            <p class="text-xs text-gray-500 font-medium">Lecturer</p>
+                            <div class="h-px bg-gray-100 my-2"></div>
+                            <p class="text-xs text-gray-600"><strong>Qualification:</strong> -------</p>
+                            <p class="text-xs text-gray-600 mt-1"><strong></strong> </p>
+                        </div>
+                    </div>
+
+                         <!-- Profile Card7 -->
+                    <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm faculty-card" data-dept="arts">
+                        <img src="images/saleem.jpeg" alt="Faculty Member Portrait" class="w-full h-44 object-cover">
+                        <div class="p-4">
+                            <span class="text-[10px] uppercase font-extrabold tracking-widest text-amber-600 block">Zoology</span>
+                            <h4 class="font-bold text-gray-900 text-base mt-1">Saleem Raza</h4>
+                            <p class="text-xs text-gray-500 font-medium">Lecturer</p>
+                            <div class="h-px bg-gray-100 my-2"></div>
+                            <p class="text-xs text-gray-600"><strong>Qualification:</strong> BS in Zoology | B.Ed</p>
+                            <p class="text-xs text-gray-600 mt-1"><strong></strong> </p>
+                        </div>
+                    </div>
+
+
+                         <!-- Profile Card8 -->
+                    <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm faculty-card" data-dept="arts">
+                        <img src="images/profilepic.jpg" alt="Faculty Member Portrait" class="w-full h-44 object-cover">
+                        <div class="p-4">
+                            <span class="text-[10px] uppercase font-extrabold tracking-widest text-amber-600 block">Botany</span>
+                            <h4 class="font-bold text-gray-900 text-base mt-1">Iqra Rajput</h4>
+                            <p class="text-xs text-gray-500 font-medium">Lecturer</p>
+                            <div class="h-px bg-gray-100 my-2"></div>
+                            <p class="text-xs text-gray-600"><strong>Qualification:</strong> Mphil in Botany (continue)</p>
+                            <p class="text-xs text-gray-600 mt-1"><strong></strong> </p>
+                        </div>
+                    </div>
+
+                         <!-- Profile Card8-->
+                    <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm faculty-card" data-dept="arts">
+                        <img src="images/profilepic.jpg" alt="Faculty Member Portrait" class="w-full h-44 object-cover">
+                        <div class="p-4">
+                            <span class="text-[10px] uppercase font-extrabold tracking-widest text-amber-600 block">Botany</span>
+                            <h4 class="font-bold text-gray-900 text-base mt-1">Aisha Rajput</h4>
+                            <p class="text-xs text-gray-500 font-medium">Lecturer</p>
+                            <div class="h-px bg-gray-100 my-2"></div>
+                            <p class="text-xs text-gray-600"><strong>Qualification:</strong> MSC in Botany</p>
+                            <p class="text-xs text-gray-600 mt-1"><strong></strong> </p>
+                        </div>
+                    </div>
+
+                         <!-- Profile Card9 -->
+                    <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm faculty-card" data-dept="arts">
+                        <img src="images/profile9.jpeg" alt="Faculty Member Portrait" class="w-full h-44 object-cover">
+                        <div class="p-4">
+                            <span class="text-[10px] uppercase font-extrabold tracking-widest text-amber-600 block">Computer Science</span>
+                            <h4 class="font-bold text-gray-900 text-base mt-1">Afeefa Qureshi</h4>
+                            <p class="text-xs text-gray-500 font-medium">Lecturer</p>
+                            <div class="h-px bg-gray-100 my-2"></div>
+                            <p class="text-xs text-gray-600"><strong>Qualification:</strong> MS  in Computer Science </p>
+                            <p class="text-xs text-gray-600 mt-1"><strong>Specialization:</strong> Artficial Intelligence</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= EVENTS PAGE ================= -->
+<section id="page-events" class="page-section">
+
+    <!-- Events Banner -->
+    <div class="relative overflow-hidden bg-college   text-white">
+
+        <img src="images/15.jpeg"
+             alt="Government Girls Degree College Shahpur Chakar"
+             class="absolute inset-0 w-full h-full object-cover">
+
+        <div class="absolute inset-0 bg-college-navy/50"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+            <span class="text-college-gold text-xs font-bold uppercase tracking-widest">
+                College Activities
+            </span>
+
+            <h1 class="font-serif text-4xl sm:text-5xl font-bold mt-3">
+                Events & Activities
+            </h1>
+
+            <p class="text-gray-200 max-w-2xl mt-4">
+                Explore recent academic, cultural, sports and co-curricular
+                activities at Government Girls Degree College Shahpur Chakar.
+            </p>
+
+        </div>
+    </div>
+
+
+    <!-- Events Gallery -->
+    <div class="bg-gray-50 py-14">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Event Heading -->
+            <div class="mb-10">
+
+                <span class="text-college-gold text-xs font-bold uppercase tracking-widest">
+                    Recent Event
+                </span>
+
+                <h2 class="font-serif text-3xl font-bold text-college-navy mt-2">
+                    14th August Celebrations
+                </h2>
+
+                <p class="text-gray-600 mt-2 max-w-2xl">
+                    Students and faculty participated in a range of activities
+                    celebrating Independence Day with enthusiasm and creativity.
+                </p>
+
+            </div>
+
+
+            <!-- Event Cards -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Flag cermony-->
+                <div class="bg-white rounded-xl overflow-hidden border
+                            border-gray-200 shadow-sm hover:shadow-lg
+                            transition group">
+
+                    <div class="relative overflow-hidden">
+
+                        <img src="images/flag.jpeg"
+                             alt="Sports activities during 14th August celebrations"
+                             class="w-full h-64 object-cover
+                                    group-hover:scale-105 transition duration-500">
+
+                    </div>
+
+                    <div class="p-5">
+
+                        <span class="text-xs font-bold uppercase
+                                     tracking-widest text-college-gold">
+                            Sports
+                        </span>
+
+                        <h3 class="font-serif text-xl font-bold
+                                   text-college-navy mt-2">
+                            Flag cermony
+                        </h3>
+
+                        <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+                            Our college celebrated Independence Day with a beautiful 
+                            flag-raising ceremony to honor our nation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Sports -->
+                <div class="bg-white rounded-xl overflow-hidden border
+                            border-gray-200 shadow-sm hover:shadow-lg
+                            transition group">
+
+                    <div class="relative overflow-hidden">
+
+                        <img src="images/sports.jpeg"
+                             alt="Sports activities during 14th August celebrations"
+                             class="w-full h-64 object-cover
+                                    group-hover:scale-105 transition duration-500">
+
+                    </div>
+
+                    <div class="p-5">
+
+                        <span class="text-xs font-bold uppercase
+                                     tracking-widest text-college-gold">
+                            Sports
+                        </span>
+
+                        <h3 class="font-serif text-xl font-bold
+                                   text-college-navy mt-2">
+                            Sports Activities
+                        </h3>
+
+                        <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+                            Students participated in sports and recreational
+                            activities as part of the Independence Day celebrations.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Poster Competition -->
+                <div class="bg-white rounded-xl overflow-hidden border
+                            border-gray-200 shadow-sm hover:shadow-lg
+                            transition group">
+
+                    <div class="relative overflow-hidden">
+
+                        <img src="images/poster.jpeg"
+                             alt="Poster competition"
+                             class="w-full h-64 object-cover
+                                    group-hover:scale-105 transition duration-500">
+
+                    </div>
+
+                    <div class="p-5">
+
+                        <span class="text-xs font-bold uppercase
+                                     tracking-widest text-college-gold">
+                            Creative Activity
+                        </span>
+
+                        <h3 class="font-serif text-xl font-bold
+                                   text-college-navy mt-2">
+                            Poster Competition
+                        </h3>
+
+                        <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+                            Students showcased their creativity and patriotic
+                            spirit through poster designing and artwork.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Quiz Competition -->
+                <div class="bg-white rounded-xl overflow-hidden border
+                            border-gray-200 shadow-sm hover:shadow-lg
+                            transition group">
+
+                    <div class="relative overflow-hidden">
+
+                        <img src="images/10.jpeg"
+                             alt="Quiz competition"
+                             class="w-full h-64 object-cover
+                                    group-hover:scale-105 transition duration-500">
+
+                    </div>
+
+                    <div class="p-5">
+
+                        <span class="text-xs font-bold uppercase
+                                     tracking-widest text-college-gold">
+                            Academic Activity
+                        </span>
+
+                        <h3 class="font-serif text-xl font-bold
+                                   text-college-navy mt-2">
+                            Quiz Competition
+                        </h3>
+
+                        <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+                            Students participated in an engaging quiz competition
+                            focusing on Pakistan's history and national heritage.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Independence Day Program -->
+                <div class="bg-white rounded-xl overflow-hidden border
+                            border-gray-200 shadow-sm hover:shadow-lg
+                            transition group">
+
+                    <div class="relative overflow-hidden">
+
+                        <img src="images/14.jpeg"
+                             alt="14th August Independence Day program"
+                             class="w-full h-64 object-cover
+                                    group-hover:scale-105 transition duration-500">
+
+                    </div>
+
+                    <div class="p-5">
+
+                        <span class="text-xs font-bold uppercase
+                                     tracking-widest text-college-gold">
+                            College Event
+                        </span>
+
+                        <h3 class="font-serif text-xl font-bold
+                                   text-college-navy mt-2">
+                            Independence Day Program
+                        </h3>
+
+                        <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+                            A special college program celebrating Pakistan's
+                            Independence Day with students and faculty.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                                <!-- prize distribution -->
+                <div class="bg-white rounded-xl overflow-hidden border
+                            border-gray-200 shadow-sm hover:shadow-lg
+                            transition group">
+
+                    <div class="relative overflow-hidden">
+
+                        <img src="images/13.jpeg"
+                             alt="14th August Independence Day program"
+                             class="w-full h-64 object-cover
+                                    group-hover:scale-105 transition duration-500">
+
+                    </div>
+
+                    <div class="p-5">
+
+                        <span class="text-xs font-bold uppercase
+                                     tracking-widest text-college-gold">
+                            prize distribution
+                        </span>
+
+                        <h3 class="font-serif text-xl font-bold
+                                   text-college-navy mt-2">
+                           prize distribution
+                        </h3>
+
+                        <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+                            Prizes were distributed to students to reward their outstanding 
+                            performance and skills in different college competitions
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- ================= 5. ADMISSIONS PAGE SECTION ================= -->
+        <section id="page-admissions" class="page-section">
+            <!-- Page Banner -->
+            <div class="page-banner relative overflow-hidden text-white">
+                <img
+                    src="images/campus.jpeg"
+                    alt="Admissions banner - Shahpur Chakar Government Girls Degree College"
+                    class="absolute inset-0 w-full h-full object-cover"
+                >
+                <div class="absolute inset-0 bg-college-dark/75"></div>
+                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+                    <span class="inline-block text-college-gold text-xs font-bold uppercase tracking-[0.2em] mb-3">Shahpur Chakar Government Girls Degree College</span>
+                    <h1 class="font-serif text-3xl sm:text-5xl font-bold">Admissions</h1>
+                    <p class="text-gray-200 mt-3 text-sm sm:text-base max-w-2xl">Find admission information, requirements, important dates, and application guidance.</p>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+                
+                <!-- Admission Announcement -->
+                <div class="bg-amber-50 border border-amber-200 rounded-lg p-5 flex items-start space-x-4">
+                    <span class="text-2xl mt-0.5">📢</span>
+                    <div>
+                        <h4 class="font-bold text-amber-900 text-base">Official Enrollment Announcement: XI Admissions are Open for Session 2026-2027</h4>
+                        <p class="text-xs text-amber-800 leading-relaxed mt-1">First Year admission forms are now available, You can apply online via the SECCAP website for an online application, or visit the college clerk office for more information. Please complete your registration before the deadline .</p>
+                    </div>
+                </div>
+
+                <!-- Process & Eligibility -->
+                <!-- ================= ADMISSION PROCESS ================= -->
+<section id="admission-process" class="py-16 bg-gray-50">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Heading -->
+        <div class="text-center mb-12">
+            <span class="text-college-gold text-xs font-bold uppercase tracking-widest">
+                Admissions
+            </span>
+
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-college-navy mt-2">
+                Admission Process
+            </h2>
+
+            <p class="text-gray-600 max-w-2xl mx-auto mt-3">
+                Follow the appropriate admission process and prepare the required
+                documents before submitting your application.
+            </p>
+        </div>
+
+
+        <!-- ================= XI ================= -->
+        <div class="bg-white rounded-xl border border-gray-200 overflow-hidden mb-8">
+
+            <div class="bg-college-navy px-6 py-5">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+
+                    <div>
+                        <span class="text-college-gold text-xs font-bold uppercase tracking-widest">
+                            Intermediate
+                        </span>
+
+                        <h3 class="font-serif text-2xl font-bold text-white mt-1">
+                            First Year — XI
+                        </h3>
+                    </div>
+
+                    <a href="https://seccap.dgcs.gos.pk/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center justify-center px-5 py-2.5
+                              bg-college-gold text-college-dark font-semibold
+                              rounded-md hover:opacity-90 transition">
+                        Apply Online
+                    </a>
+
+                </div>
+            </div>
+
+
+            <div class="p-6 grid md:grid-cols-2 gap-8">
+
+                <!-- Admission Process -->
+                <div>
+                    <h4 class="font-semibold text-college-navy text-lg mb-4">
+                        How to Apply
+                    </h4>
+
+                    <div class="space-y-4">
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full
+                                        bg-college-gold text-college-dark
+                                        flex items-center justify-center font-bold">
+                                1
+                            </div>
+
+                            <div>
+                                <h5 class="font-semibold text-gray-900">
+                                    Online Application
+                                </h5>
+
+                                <p class="text-sm text-gray-600 mt-1">
+                                    Apply online through the
+                                    <strong>SECCAP</strong> admission portal.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full
+                                        bg-college-gold text-college-dark
+                                        flex items-center justify-center font-bold">
+                                2
+                            </div>
+
+                            <div>
+                                <h5 class="font-semibold text-gray-900">
+                                    Submit Required Documents
+                                </h5>
+
+                                <p class="text-sm text-gray-600 mt-1">
+                                    Submit the required documents according to
+                                    the college admission instructions.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Required Documents -->
+                <div>
+                    <h4 class="font-semibold text-college-navy text-lg mb-4">
+                        Required Documents
+                    </h4>
+
+                    <ul class="space-y-3 text-sm text-gray-600">
+
+                        <li class="flex gap-3">
+                            <span class="text-college-gold">✓</span>
+                            <span>9th Class Marksheet <strong>(Photocopy)</strong></span>
+                        </li>
+
+                        <li class="flex gap-3">
+                            <span class="text-college-gold">✓</span>
+                            <span>10th Class Examination Slip <strong>(Photocopy)</strong></span>
+                        </li>
+
+                        <li class="flex gap-3">
+                            <span class="text-college-gold">✓</span>
+                            <span>B-Form <strong>(Photocopy)</strong></span>
+                        </li>
+
+                        <li class="flex gap-3">
+                            <span class="text-college-gold">✓</span>
+                            <span>2 Passport-Size Photographs</span>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- ================= XII ================= -->
+        <div class="bg-white rounded-xl border border-gray-200 overflow-hidden mb-8">
+
+            <div class="bg-college-navy px-6 py-5">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+
+                    <div>
+                        <span class="text-college-gold text-xs font-bold uppercase tracking-widest">
+                            Intermediate
+                        </span>
+
+                        <h3 class="font-serif text-2xl font-bold text-white mt-1">
+                            Second Year — XII
+                        </h3>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="p-6 grid md:grid-cols-2 gap-8">
+
+                <!-- Process -->
+                <div>
+                    <h4 class="font-semibold text-college-navy text-lg mb-4">
+                        Admission / Enrollment
+                    </h4>
+
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Students continuing to Second Year should complete their
+                        enrollment requirements and submit the required documents
+                        according to college instructions.
+                    </p>
+                </div>
+
+
+                <!-- Documents -->
+                <div>
+                    <h4 class="font-semibold text-college-navy text-lg mb-4">
+                        Required Documents
+                    </h4>
+
+                    <ul class="space-y-3 text-sm text-gray-600">
+
+                        <li class="flex gap-3">
+                            <span class="text-college-gold">✓</span>
+                            <span>XI Enrollment <strong>(Photocopy)</strong></span>
+                        </li>
+
+                        <li class="flex gap-3">
+                            <span class="text-college-gold">✓</span>
+                            <span>XI Examination Slip <strong>(Photocopy)</strong></span>
+                        </li>
+
+                        <li class="flex gap-3">
+                            <span class="text-college-gold">✓</span>
+                            <span>B-Form</span>
+                        </li>
+
+                        <li class="flex gap-3">
+                            <span class="text-college-gold">✓</span>
+                            <span>3 Passport-Size Photographs</span>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- ================= DEGREE PROGRAMS ================= -->
+        <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+
+            <div class="bg-college-navy px-6 py-5">
+
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+
+                    <div>
+                        <span class="text-college-gold text-xs font-bold uppercase tracking-widest">
+                            Degree Programs
+                        </span>
+
+                        <h3 class="font-serif text-2xl font-bold text-white mt-1">
+                            ADS / BSc & ADA / BA
+                        </h3>
+                    </div>
+
+                    <a href="#"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center justify-center px-5 py-2.5
+                              bg-college-gold text-college-dark font-semibold
+                              rounded-md hover:opacity-90 transition">
+                        Apply Online
+                    </a>
+
+                </div>
+            </div>
+
+
+            <div class="p-6 grid md:grid-cols-2 gap-8">
+
+                <!-- Application Process -->
+                <div>
+
+                    <h4 class="font-semibold text-college-navy text-lg mb-4">
+                        How to Apply
+                    </h4>
+
+                    <div class="space-y-4">
+
+                        <div class="flex gap-4">
+
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full
+                                        bg-college-gold text-college-dark
+                                        flex items-center justify-center font-bold">
+                                1
+                            </div>
+
+                            <div>
+                                <h5 class="font-semibold text-gray-900">
+                                    Online Application
+                                </h5>
+
+                                <p class="text-sm text-gray-600 mt-1">
+                                    Apply online through the
+                                    <strong>SBBU E-Portal</strong>.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="flex gap-4">
+
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full
+                                        bg-college-gold text-college-dark
+                                        flex items-center justify-center font-bold">
+                                2
+                            </div>
+
+                            <div>
+                                <h5 class="font-semibold text-gray-900">
+                                    Document Submission
+                                </h5>
+
+                                <p class="text-sm text-gray-600 mt-1">
+                                    Submit the required academic documents and
+                                    photographs as specified by the college.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Degree Documents -->
+                <div>
+
+                    <h4 class="font-semibold text-college-navy text-lg mb-4">
+                        Required Documents
+                    </h4>
+
+                    <ul class="space-y-3 text-sm text-gray-600">
+
+                        <li class="flex gap-3">
+                            <span class="text-college-gold">✓</span>
+                            <span>
+                                Intermediate Pass Certificate
+                                <strong>(Photocopy)</strong>
+                            </span>
+                        </li>
+
+                        <li class="flex gap-3">
+                            <span class="text-college-gold">✓</span>
+                            <span>
+                                Intermediate Marksheet
+                                <strong>(3 Photocopies)</strong>
+                            </span>
+                        </li>
+
+                        <li class="flex gap-3">
+                            <span class="text-college-gold">✓</span>
+                            <span>
+                                Matriculation Pass Certificate
+                                <strong>(Photocopy)</strong>
+                            </span>
+                        </li>
+
+                        <li class="flex gap-3">
+                            <span class="text-college-gold">✓</span>
+                            <span>
+                                Matriculation Marksheet
+                                <strong>(2 Photocopies)</strong>
+                            </span>
+                        </li>
+
+                        <li class="flex gap-3">
+                            <span class="text-college-gold">✓</span>
+                            <span>
+                                B-Form <strong>(2 Photocopies)</strong>
+                            </span>
+                        </li>
+
+                        <li class="flex gap-3">
+                            <span class="text-college-gold">✓</span>
+                            <span>
+                                4 Passport-Size Photographs
+                            </span>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Note -->
+        <div class="mt-8 bg-blue-50 border border-blue-100 rounded-lg p-5">
+
+            <p class="text-sm text-blue-900">
+                <strong>Important:</strong>
+                Applicants should carefully check the admission requirements
+                and submit complete documents according to the instructions
+                provided by the relevant admission portal and the college.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+</section>
+            
+
+
+        <!-- ================= 6. CONTACT PAGE SECTION ================= -->
+        <!-- ================= CONTACT PAGE ================= -->
+<section id="page-contact" class="page-section">
+
+    <!-- Page Header -->
+    <div class="relative overflow-hidden bg-college-navy text-white">
+
+        <div class="absolute inset-0 opacity-60">
+            <img src="images/6.jpeg"
+                 alt="Government Girls Degree College Shahpur Chakar"
+                 class="w-full h-full object-cover">
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+            <span class="text-college-gold text-xs font-bold uppercase tracking-widest">
+                Get In Touch
+            </span>
+
+            <h1 class="font-serif text-4xl sm:text-5xl font-bold mt-3">
+                Contact Us
+            </h1>
+
+            <p class="text-gray-200 mt-3 max-w-2xl">
+                Contact Government Girls Degree College Shahpur Chakar
+                for admissions, academic information, and general enquiries.
+            </p>
+
+        </div>
+    </div>
+
+
+    <!-- Contact Content -->
+    <div class="bg-gray-50 py-16">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid lg:grid-cols-3 gap-6">
+
+
+                <!-- College Information -->
+                <div class="lg:col-span-2">
+
+                    <div class="bg-white rounded-2xl border border-gray-200
+                                shadow-sm overflow-hidden">
+
+                        <div class="p-7 sm:p-8">
+
+                            <div class="flex items-start gap-4 mb-8">
+
+                                <div class="w-12 h-12 rounded-xl
+                                            bg-college-navy
+                                            flex items-center justify-center
+                                            flex-shrink-0">
+
+                                    <svg class="w-6 h-6 text-college-gold"
+                                         fill="none"
+                                         stroke="currentColor"
+                                         viewBox="0 0 24 24">
+
+                                        <path stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.8"
+                                              d="M12 14l9-5-9-5-9 5 9 5z">
+                                        </path>
+
+                                        <path stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.8"
+                                              d="M5 12v5c0 1.5 3.1 3 7 3s7-1.5 7-3v-5">
+                                        </path>
+
+                                    </svg>
+
+                                </div>
+
+                                <div>
+                                    <span class="text-xs font-bold uppercase
+                                                 tracking-widest text-college-gold">
+                                        College Information
+                                    </span>
+
+                                    <h2 class="font-serif text-2xl sm:text-3xl
+                                               font-bold text-college-navy mt-1">
+                                        Government Girls Degree College
+                                    </h2>
+
+                                    <p class="text-gray-500 mt-1">
+                                        Shahpur Chakar
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Contact Cards -->
+                            <div class="grid sm:grid-cols-2 gap-4">
+
+
+                                <!-- Address -->
+                                <div class="group rounded-xl border border-gray-200
+                                            p-5 hover:border-college-gold
+                                            hover:shadow-md transition">
+
+                                    <div class="flex items-center gap-3 mb-3">
+
+                                        <div class="w-10 h-10 rounded-lg
+                                                    bg-blue-50
+                                                    flex items-center justify-center">
+
+                                            <svg class="w-5 h-5 text-college-navy"
+                                                 fill="none"
+                                                 stroke="currentColor"
+                                                 viewBox="0 0 24 24">
+
+                                                <path stroke-linecap="round"
+                                                      stroke-linejoin="round"
+                                                      stroke-width="2"
+                                                      d="M12 21s8-6.2 8-12a8 8 0 10-16 0c0 5.8 8 12 8 12z">
+                                                </path>
+
+                                                <circle cx="12"
+                                                        cy="9"
+                                                        r="2.5"
+                                                        stroke-width="2">
+                                                </circle>
+
+                                            </svg>
+
+                                        </div>
+
+                                        <h3 class="font-semibold text-college-navy">
+                                            College Address
+                                        </h3>
+
+                                    </div>
+
+                                    <p class="text-sm text-gray-600 leading-relaxed">
+                                        Government Girls Degree College,
+                                        <br>
+                                        Shahpur Chakar, Sindh, Pakistan.
+                                    </p>
+
+                                </div>
+
+
+                                <!-- Phone -->
+                                <div class="group rounded-xl border border-gray-200
+                                            p-5 hover:border-college-gold
+                                            hover:shadow-md transition">
+
+                                    <div class="flex items-center gap-3 mb-3">
+
+                                        <div class="w-10 h-10 rounded-lg
+                                                    bg-blue-50
+                                                    flex items-center justify-center">
+
+                                            <svg class="w-5 h-5 text-college-navy"
+                                                 fill="none"
+                                                 stroke="currentColor"
+                                                 viewBox="0 0 24 24">
+
+                                                <path stroke-linecap="round"
+                                                      stroke-linejoin="round"
+                                                      stroke-width="2"
+                                                      d="M3 5a2 2 0 012-2h3.28a2 2 0 011.94 1.515l.49 1.96a2 2 0 01-.45 1.82L8.91 9.65a16 16 0 006.44 6.44l1.355-1.355a2 2 0 011.82-.45l1.96.49A2 2 0 0120 16.72V20a2 2 0 01-2 2h-1C9.163 22 2 14.837 2 6V5a2 2 0 012-2z">
+                                                </path>
+
+                                            </svg>
+
+                                        </div>
+
+                                        <h3 class="font-semibold text-college-navy">
+                                            Phone
+                                        </h3>
+
+                                    </div>
+
+                                    <div class="space-y-2 text-sm">
+
+                                        <a href="tel:0235846112"
+                                           class="block text-gray-600 hover:text-college-navy transition">
+                                            0235846112
+                                        </a>
+
+                                        <a href="tel:+923017005890"
+                                           class="block text-gray-600 hover:text-college-navy transition">
+                                            +92 301 7005890
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Office Hours -->
+                                <div class="group rounded-xl border border-gray-200
+                                            p-5 hover:border-college-gold
+                                            hover:shadow-md transition">
+
+                                    <div class="flex items-center gap-3 mb-3">
+
+                                        <div class="w-10 h-10 rounded-lg
+                                                    bg-blue-50
+                                                    flex items-center justify-center">
+
+                                            <svg class="w-5 h-5 text-college-navy"
+                                                 fill="none"
+                                                 stroke="currentColor"
+                                                 viewBox="0 0 24 24">
+
+                                                <circle cx="12"
+                                                        cy="12"
+                                                        r="9"
+                                                        stroke-width="2">
+                                                </circle>
+
+                                                <path stroke-linecap="round"
+                                                      stroke-width="2"
+                                                      d="M12 7v5l3 2">
+                                                </path>
+
+                                            </svg>
+
+                                        </div>
+
+                                        <h3 class="font-semibold text-college-navy">
+                                            Office Hours
+                                        </h3>
+
+                                    </div>
+
+                                    <p class="text-sm text-gray-600">
+                                        Monday – Saturday
+                                    </p>
+
+                                    <p class="text-sm font-semibold text-college-navy mt-1">
+                                        9:00 AM – 2:00 PM
+                                    </p>
+
+                                    <div class="mt-3 pt-3 border-t border-gray-100">
+
+                                        <p class="text-sm text-gray-500">
+                                            Sunday
+                                            <span class="font-semibold text-red-500 ml-1">
+                                                Closed
+                                            </span>
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Social Media -->
+                                <div class="group rounded-xl border border-gray-200
+                                            p-5 hover:border-college-gold
+                                            hover:shadow-md transition">
+
+                                    <div class="flex items-center gap-3 mb-3">
+
+                                        <div class="w-10 h-10 rounded-lg
+                                                    bg-blue-50
+                                                    flex items-center justify-center">
+
+                                            <svg class="w-5 h-5 text-college-navy"
+                                                 fill="none"
+                                                 stroke="currentColor"
+                                                 viewBox="0 0 24 24">
+
+                                                <circle cx="12"
+                                                        cy="12"
+                                                        r="9"
+                                                        stroke-width="2">
+                                                </circle>
+
+                                                <path stroke-linecap="round"
+                                                      stroke-linejoin="round"
+                                                      stroke-width="2"
+                                                      d="M8 12h8M12 8v8">
+                                                </path>
+
+                                            </svg>
+
+                                        </div>
+
+                                        <h3 class="font-semibold text-college-navy">
+                                            Connect With Us
+                                        </h3>
+
+                                    </div>
+
+                                    <p class="text-sm text-gray-500 mb-4">
+                                        Follow our official social media channels
+                                        for college updates and announcements.
+                                    </p>
+
+                                    <div class="flex gap-3">
+
+                                        <!-- Facebook -->
+                                        <a href="https://www.facebook.com/share/1Gd2yGvC1K/"
+                                           target="_blank"
+                                           rel="noopener noreferrer"
+                                           aria-label="Facebook"
+                                           class="w-10 h-10 rounded-lg bg-gray-100
+                                                  flex items-center justify-center
+                                                  text-gray-600
+                                                  hover:bg-blue-600 hover:text-white
+                                                  transition">
+
+                                            <svg class="w-5 h-5"
+                                                 fill="currentColor"
+                                                 viewBox="0 0 24 24">
+                                                <path d="M14 8h3V4h-3c-3.314 0-5 1.686-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.552.448-1 1-1z"/>
+                                            </svg>
+
+                                        </a>
+
+
+                                        <!-- Instagram -->
+                                        <a href="https://www.instagram.com/ggdc_shahpur_chakar_official?igsh=b2FkMXdhY3Bhcno2"
+                                           target="_blank"
+                                           rel="noopener noreferrer"
+                                           aria-label="Instagram"
+                                           class="w-10 h-10 rounded-lg bg-gray-100
+                                                  flex items-center justify-center
+                                                  text-gray-600
+                                                  hover:bg-pink-600 hover:text-white
+                                                  transition">
+
+                                            <svg class="w-5 h-5"
+                                                 fill="none"
+                                                 stroke="currentColor"
+                                                 stroke-width="2"
+                                                 viewBox="0 0 24 24">
+
+                                                <rect x="3" y="3"
+                                                      width="18"
+                                                      height="18"
+                                                      rx="5">
+                                                </rect>
+
+                                                <circle cx="12"
+                                                        cy="12"
+                                                        r="4">
+                                                </circle>
+
+                                                <circle cx="17.5"
+                                                        cy="6.5"
+                                                        r="1"
+                                                        fill="currentColor"
+                                                        stroke="none">
+                                                </circle>
+
+                                            </svg>
+
+                                        </a>
+
+
+                                        <!-- WhatsApp -->
+                                        <a href="https://whatsapp.com/channel/0029VbBIfaF0bIdr1vmnYo0A"
+                                           target="_blank"
+                                           rel="noopener noreferrer"
+                                           aria-label="WhatsApp Channel"
+                                           class="w-10 h-10 rounded-lg bg-gray-100
+                                                  flex items-center justify-center
+                                                  text-gray-600
+                                                  hover:bg-green-600 hover:text-white
+                                                  transition">
+
+                                            <svg class="w-5 h-5"
+                                                 fill="currentColor"
+                                                 viewBox="0 0 24 24">
+
+                                                <path d="M12 2a10 10 0 00-8.66 15L2 22l5.18-1.36A10 10 0 1012 2zm0 18a8 8 0 01-4.09-1.12l-.29-.17-3.07.8.82-2.99-.19-.31A8 8 0 1112 20zm4.35-5.94c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.18-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.15 1.51.09.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/>
+                                            </svg>
+
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Office Hours / Welcome Card -->
+                <div class="space-y-6">
+
+                    <!-- Quick Contact -->
+                    <div class="bg-college-navy text-white rounded-2xl p-7 shadow-lg">
+
+                        <span class="text-college-gold text-xs font-bold uppercase tracking-widest">
+                            Government Girls Degree College
+                        </span>
+
+                        <h2 class="font-serif text-2xl font-bold mt-3">
+                            Shahpur Chakar
+                        </h2>
+
+                        <p class="text-gray-300 text-sm leading-relaxed mt-4">
+                            For admission enquiries, academic information, and
+                            general college matters, please contact the college
+                            during office hours.
+                        </p>
+<!--
+                        <a href="tel:0235846112"
+                           class="mt-6 inline-flex items-center justify-center
+                                  w-full px-5 py-3 bg-college-gold
+                                  text-college-dark font-semibold rounded-lg
+                                  hover:opacity-90 transition">
+                            Call College
+                        </a>
+                    -->
+                    </div>
+
+
+                    <!-- Office Hours -->
+                    <div class="bg-white rounded-2xl border border-gray-200
+                                p-7 shadow-sm">
+
+                        <h3 class="font-serif text-xl font-bold text-college-navy">
+                            Office Hours
+                        </h3>
+
+                        <div class="mt-5 space-y-4">
+
+                            <div class="flex items-center justify-between
+                                        border-b border-gray-100 pb-3">
+
+                                <span class="text-sm text-gray-600">
+                                    Monday – Saturday
+                                </span>
+
+                                <span class="text-sm font-semibold text-college-navy">
+                                    9:00 AM – 2:00 PM
+                                </span>
+
+                            </div>
+
+                            <div class="flex items-center justify-between">
+
+                                <span class="text-sm text-gray-600">
+                                    Sunday
+                                </span>
+
+                                <span class="text-sm font-semibold text-red-500">
+                                    Closed
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+                        </section>
+
+    </main>
+
+<!-- Unified Footer System -->
+<footer class="bg-college-dark text-gray-400 text-xs py-12 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+
+            <!-- College Information -->
+            <div>
+                <span class="font-serif font-bold text-white text-base block mb-2 tracking-wide">
+                    GOVERNMENT GIRLS DEGREE COLLEGE SHAHPUR CHAKAR
+                </span>
+
+                <p class="text-[11px] text-gray-500 leading-relaxed">
+                    Government Girls Degree College Shahpur Chakar is committed to
+                    providing quality education and creating opportunities for
+                    students to achieve their academic goals.
+                </p>
+            </div>
+
+
+            <!-- Quick Navigation -->
+            <div>
+                <h4 class="text-white font-semibold text-[11px] uppercase tracking-widest mb-3">
+                    Quick Navigation
+                </h4>
+
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="navigateTo('home')" class="text-left hover:text-white transition">
+                        Home
+                    </button>
+
+                    <button onclick="navigateTo('about')" class="text-left hover:text-white transition">
+                        About Us
+                    </button>
+
+                    <button onclick="navigateTo('programs')" class="text-left hover:text-white transition">
+                        Programs
+                    </button>
+
+                    <button onclick="navigateTo('faculty')" class="text-left hover:text-white transition">
+                        Faculty
+                    </button>
+
+                    <button onclick="navigateTo('admissions')" class="text-left hover:text-white transition">
+                        Admissions
+                    </button>
+
+                    <button onclick="navigateTo('contact')" class="text-left hover:text-white transition">
+                        Contact
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- Contact Information -->
+            <div>
+                <h4 class="text-white font-semibold text-[11px] uppercase tracking-widest mb-3">
+                    Contact Us
+                </h4>
+
+                <div class="space-y-3">
+
+                    <!-- Phone -->
+                    <a href="tel:0235846112"
+                       class="flex items-center gap-3 hover:text-white transition">
+                        <svg class="w-4 h-4 text-college-gold flex-shrink-0"
+                             fill="none"
+                             stroke="currentColor"
+                             viewBox="0 0 24 24">
+                            <path stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M3 5a2 2 0 012-2h3.28a2 2 0 011.94 1.515l.49 1.96a2 2 0 01-.45 1.82L8.91 9.65a16 16 0 006.44 6.44l1.355-1.355a2 2 0 011.82-.45l1.96.49A2 2 0 0120 16.72V20a2 2 0 01-2 2h-1C9.163 22 2 14.837 2 6V5a2 2 0 012-2z">
+                            </path>
+                        </svg>
+
+                        <span>0235846112</span>
+                    </a>
+
+
+                    <!-- Mobile -->
+                    <a href="tel:+923017005890"
+                       class="flex items-center gap-3 hover:text-white transition">
+                        <svg class="w-4 h-4 text-college-gold flex-shrink-0"
+                             fill="none"
+                             stroke="currentColor"
+                             viewBox="0 0 24 24">
+                            <path stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M3 5a2 2 0 012-2h3.28a2 2 0 011.94 1.515l.49 1.96a2 2 0 01-.45 1.82L8.91 9.65a16 16 0 006.44 6.44l1.355-1.355a2 2 0 011.82-.45l1.96.49A2 2 0 0120 16.72V20a2 2 0 01-2 2h-1C9.163 22 2 14.837 2 6V5a2 2 0 012-2z">
+                            </path>
+                        </svg>
+
+                        <span>+92 301 7005890</span>
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- Social Media -->
+            <div>
+                <h4 class="text-white font-semibold text-[11px] uppercase tracking-widest mb-3">
+                    Follow Us
+                </h4>
+
+                <p class="text-[11px] text-gray-500 mb-4">
+                    Connect with us on social media.
+                </p>
+
+                <div class="flex items-center gap-3">
+
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/share/1Gd2yGvC1K/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Facebook"
+                       class="w-9 h-9 rounded-full bg-blue-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition">
+
+                        <svg class="w-4 h-4"
+                             fill="currentColor"
+                             viewBox="0 0 24 24">
+                            <path d="M14 8h3V4h-3c-3.314 0-5 1.686-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.552.448-1 1-1z"/>
+                        </svg>
+
+                    </a>
+
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/ggdc_shahpur_chakar_official?igsh=b2FkMXdhY3Bhcno2"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Instagram"
+                       class="w-9 h-9 rounded-full bg-pink-800 flex items-center justify-center hover:bg-pink-600 hover:text-white transition">
+
+                        <svg class="w-4 h-4"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             viewBox="0 0 24 24">
+
+                            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+
+                            <circle cx="12" cy="12" r="4"></circle>
+
+                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+
+                        </svg>
+
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-800 pt-6 text-center">
+
+            <p class="text-[11px] text-gray-500">
+                © 2026 Government Girls Degree College, Shahpur Chakar.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+</footer>
+
+    <!-- INTERACTIVE SCRIPTS ROUTING & FILTERING -->
+    <script>
+        // Single-Page Tab Switching Navigation Engine
+        function navigateTo(sectionId) {
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(sec => sec.classList.remove('active'));
+
+            const targetSection = document.getElementById('page-' + sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            const targetedLink = document.getElementById('nav-' + sectionId);
+            if (targetedLink) {
+                targetedLink.classList.add('active');
+            }
+
+            // Collapse mobile drawer system if active
+            const mobileMenu = document.getElementById('mobile-menu');
+            const openIcon = document.getElementById('menu-icon-open');
+            const closeIcon = document.getElementById('menu-icon-close');
+            
+            mobileMenu.classList.add('hidden');
+            openIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+        }
+
+        // Mobile Menu Drawer Handler
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const openIcon = document.getElementById('menu-icon-open');
+            const closeIcon = document.getElementById('menu-icon-close');
+
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                openIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+                openIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        });
+
+        // Faculty Filter Optimization Routine
+        function filterFaculty(category) {
+            const cards = document.querySelectorAll('.faculty-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-dept') === category) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            // Restyle active button layout states visually
+            const filterContainer = document.getElementById('faculty-filters-container');
+            const buttons = filterContainer.querySelectorAll('button');
+            buttons.forEach(btn => {
+                btn.className = "bg-white border border-gray-200 text-gray-700 text-xs font-bold px-4 py-2 rounded shadow-sm transition hover:bg-gray-50";
+            });
+
+            const activeBtn = document.getElementById('btn-filter-' + category);
+            if (activeBtn) {
+                activeBtn.className = "bg-college-navy text-white text-xs font-bold px-4 py-2 rounded shadow transition hover:opacity-90";
+            }
+        }
+
+        // Custom Safe Form Submissions Handling Logic
+        function processFormSubmission(event) {
+            event.preventDefault();
+            const box = document.getElementById('contact-feedback');
+            
+            box.className = "mb-4 p-4 rounded text-sm font-medium bg-emerald-100 text-emerald-800 border border-emerald-200 shadow-sm";
+            box.innerText = "✓ Electronic inquiry packet logged seamlessly! The admissions or corresponding department desk will dispatch a routing reply inside 48 business hours.";
+            box.classList.remove('hidden');
+            
+            document.getElementById('contact-form-element').reset();
+            
+            setTimeout(() => {
+                box.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
